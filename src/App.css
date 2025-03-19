@@ -1,0 +1,132 @@
+/* Reset default margins and padding */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Outer container with background animation */
+.App {
+  text-align: center;
+}
+
+/* Todo container styling */
+.todo-container {
+  background-color: rgb(55, 127, 163) ;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Heading styling */
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Input container */
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  width: 80%;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Icon styling */
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.add-icon {
+  color: #ffffff;
+  background-color: #007bff;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.add-icon:hover {
+  background-color: #0056b3;
+}
+
+.edit-icon {
+  color: #ffc107;
+}
+
+.edit-icon:hover {
+  color: #e0a800;
+}
+
+.delete-icon {
+  color: #dc3545;
+}
+
+.delete-icon:hover {
+  color: #c82333;
+}
+
+.check-icon {
+  color: #28a745; /* Green for success */
+  margin-right: 10px;
+}
+
+.check-icon:hover {
+  color: #218838;
+}
+
+/* List styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin: 8px 0;
+  background-color: rgba(240, 240, 240, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.icons {
+  display: flex;
+  gap: 12px;
+}
