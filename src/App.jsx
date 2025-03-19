@@ -38,7 +38,7 @@ useEffect(() => {
   //fetch task from backend
   const fetchTasks= async ()=>{
     try {
-      const response= await fetch("http://localhost:5000/api/todos");
+      const response= await fetch("https://todo-app-backend-murex.vercel.app/api/todos");
       const data= await response.json();
       if (Array.isArray(data)) {
         setTasks(data); // Set tasks only if it's an array
@@ -61,7 +61,7 @@ useEffect(() => {
       
     } else {
       try {
-        const response= await fetch('http://localhost:5000/api/todos', {
+        const response= await fetch('https://todo-app-backend-murex.vercel.app/api/todos', {
           method:'POST',
           headers:{'Content-Type': 'application/json'},
           body:JSON.stringify({task:input}),
@@ -80,7 +80,7 @@ useEffect(() => {
 
   const deleteTask = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/todos/${id}`,{
+      await fetch(`https://todo-app-backend-murex.vercel.app/api/todos/${id}`,{
         method:'DELETE',
       });
       fetchTasks();
@@ -98,7 +98,7 @@ useEffect(() => {
   //update a task
   const updateTask= async (id, updatedTask)=>{
   try {
-    await fetch(`http://localhost:5000/api/todos/${id}`, {
+    await fetch(`https://todo-app-backend-murex.vercel.app/api/todos/${id}`, {
       method:'PUT',
       headers:{'Content-Type': 'application/json'},
       body:JSON.stringify({task:updatedTask}),
